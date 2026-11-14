@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-14T21:23:40.147922+00:00",
+  "global_new_conjecture_closures": 0,
+  "sources": {
+    "lean/Certificates.lean": "a45138ab0add7406bf68c12d89f1fccd3841086432e271fc99313b25996b60c2",
+    "julia/verify.jl": "d694175f9aab7cf43c5146b12c5fe745d6d4efa55f9cab2f45b252b239da860b"
+  },
+  "lean": {
+    "status": "passed",
+    "runtime": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+    "exit_code": 0,
+    "checked_theorems": 8,
+    "axiom_dependencies": {
+      "d4_count": [],
+      "d4_distinct": [],
+      "d4_norms": [],
+      "d4_pair_separation": [],
+      "d4_distance_two_witness": [],
+      "square_mod_four": [
+        "propext",
+        "Quot.sound"
+      ],
+      "no_integer_sum_squares_three": [
+        "propext",
+        "Quot.sound"
+      ],
+      "sum_squares_two_witness": []
+    },
+    "new_axioms_declared": false,
+    "mathlib_required": false
+  },
+  "julia": {
+    "status": "passed",
+    "exit_code": 0,
+    "runtime": "1.10.9",
+    "test_assertions": 17
+  },
+  "status": "passed"
+}

@@ -1,0 +1,49 @@
+name: Verify Lean and Julia artifacts
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up pinned Lean toolchain
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: 'false'
+          build: 'false'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'false'
+          use-github-cache: 'false'
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@v2
+        with:
+          version: '1.10'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run both proof artifact checks
+        run: python scripts/validate.py --lean "$(command -v lean)" --julia "$(command -v julia)" --require-julia
+      - name: Check the D4 spectral inequality in Lean
+        run: |
+          set -o pipefail
+          lean lean/D4Spectral.lean | tee reports/d4-spectral-lean-ci.txt
+          grep -Fq "'AnaxiaResearch.d4_spectral_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]" reports/d4-spectral-lean-ci.txt
+          grep -Fq "'AnaxiaResearch.d4_spectral_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]" reports/d4-spectral-lean-ci.txt
+      - name: Replay the intermediate D4 grid spectrum and packing
+        run: julia --startup-file=no julia/verify_d4_intermediate_grid.jl --output reports/d4-intermediate-grid.toml
+      - name: Retain actual logs and verification records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: proof-verification-records
+          path: reports/
+          if-no-files-found: warn

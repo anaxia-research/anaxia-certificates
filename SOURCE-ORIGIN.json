@@ -1,0 +1,10 @@
+{
+  "source_repository": "https://github.com/anaxia-research/Anaxia-Research",
+  "source_revision": "6aa07ac",
+  "extracted_paths": [
+    "lean/",
+    "julia/",
+    "scripts/validate.py"
+  ],
+  "public_scope": "Proof sources and fresh computational reports. Draft manuscript remains in the private source repository."
+}

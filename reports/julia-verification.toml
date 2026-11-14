@@ -1,0 +1,30 @@
+all_assertions_passed = true
+arithmetic = "BigInt and Rational{BigInt}"
+global_new_conjecture_closures = 0
+runtime = "1.10.9"
+schema_version = 1
+test_assertions = 17
+
+[d4]
+minimum_distance_squared = 2
+norm_squared = 2
+roots = 24
+scope = "Known 24-vector construction only; no universal upper bound or uniqueness proof."
+unordered_pairs = 276
+
+    [d4.distance_squared_histogram]
+    2 = 96
+    4 = 72
+    6 = 96
+    8 = 12
+
+[modular]
+modulus = 4
+scope = "Finite residue table; universal integer theorem is independently proved in Lean."
+sum_of_two_squares_residues = [0, 1, 2]
+
+[polynomial]
+counterexample = "x=1/2 gives x(x-1)=-1/4"
+exact_identity_verified = true
+scope = "Coefficient identity and explicit rational counterexample only."
+tampered_identity_rejected = true

@@ -1,0 +1,7 @@
+Test Summary:                | Pass  Total  Time
+D4 exact finite construction |    7      7  0.1s
+Test Summary:                                   | Pass  Total  Time
+Exact coefficient evidence and negative control |    6      6  0.1s
+Test Summary:             | Pass  Total  Time
+Modular obstruction table |    4      4  0.0s
+Saved exact replication report to reports/julia-verification.toml

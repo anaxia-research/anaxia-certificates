@@ -1,0 +1,8 @@
+'AnaxiaResearch.d4_count' does not depend on any axioms
+'AnaxiaResearch.d4_distinct' does not depend on any axioms
+'AnaxiaResearch.d4_norms' does not depend on any axioms
+'AnaxiaResearch.d4_pair_separation' does not depend on any axioms
+'AnaxiaResearch.d4_distance_two_witness' does not depend on any axioms
+'AnaxiaResearch.square_mod_four' depends on axioms: [propext, Quot.sound]
+'AnaxiaResearch.no_integer_sum_squares_three' depends on axioms: [propext, Quot.sound]
+'AnaxiaResearch.sum_squares_two_witness' does not depend on any axioms

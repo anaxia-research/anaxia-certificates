@@ -1,0 +1,27 @@
+attained_fraction = "1//9"
+attaining_pairs_checked = 2556
+attaining_vertices = 72
+characters_checked = 648
+cubic_coefficients = [135, -216, 108, -16]
+minimum_eigenvalue = -9
+period = 6
+scope = "Exact finite checks for the intermediate-scale fixed D4 grid argument."
+torus_vertices = 648
+weighted_degree = 72
+
+[spectrum_multiplicities]
+-1 = 96
+-4 = 48
+-5 = 160
+-7 = 72
+-8 = 52
+-9 = 32
+0 = 24
+1 = 24
+19 = 32
+32 = 24
+4 = 48
+49 = 8
+72 = 1
+8 = 3
+9 = 24
